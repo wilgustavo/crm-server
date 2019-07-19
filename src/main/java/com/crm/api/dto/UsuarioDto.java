@@ -1,4 +1,4 @@
-package com.crm.dto;
+package com.crm.api.dto;
 
 import java.util.UUID;
 

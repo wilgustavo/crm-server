@@ -1,12 +1,12 @@
-package com.crm.service;
+package com.crm.core.service;
 
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
 import com.crm.common.exception.NotFoundException;
-import com.crm.model.Usuario;
-import com.crm.repository.UsuarioRepository;
+import com.crm.core.model.Usuario;
+import com.crm.core.repository.UsuarioRepository;
 
 @Service
 public class UsuarioServiceImpl implements UsuarioService {

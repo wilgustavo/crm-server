@@ -1,8 +1,8 @@
-package com.crm.service;
+package com.crm.core.service;
 
 import java.util.UUID;
 
-import com.crm.model.Usuario;
+import com.crm.core.model.Usuario;
 
 public interface UsuarioService {
     

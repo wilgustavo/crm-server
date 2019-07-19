@@ -1,4 +1,4 @@
-package com.crm.model;
+package com.crm.core.model;
 
 import java.util.UUID;
 
