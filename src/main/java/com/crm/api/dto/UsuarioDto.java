@@ -1,5 +1,6 @@
 package com.crm.api.dto;
 
+import java.util.Set;
 import java.util.UUID;
 
 import lombok.Data;
@@ -11,5 +12,6 @@ public class UsuarioDto {
     private String nombre;
     private String apellido;
     private String email;
+    private Set<GrupoDto> grupos;
 
 }

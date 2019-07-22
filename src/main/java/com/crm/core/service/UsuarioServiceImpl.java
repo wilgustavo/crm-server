@@ -25,6 +25,11 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
+    public Usuario consultarPorEmail(String email) {
+        return usuarioRepository.findByEmail(email).orElseThrow(() -> new NotFoundException(NOT_FOUND_ERROR + email));
+    }
+    
+    @Override
     public Usuario crear(Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
