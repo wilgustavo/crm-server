@@ -1,6 +1,6 @@
 insert into grupo (nombre, descripcion) 
 values 
-('ADMIN', 'Administradores'),
+('ROLE_ADMIN', 'Administradores'),
 ('COMERCIAL', 'Comerciales');
 
 insert into usuario (id, apellido, nombre, email) 
@@ -12,4 +12,4 @@ values
 insert into grupo_usuario (usuario_id, grupo_nombre) 
 values
 ('96ec1106219c4f25a12a07a4f79940b0', 'COMERCIAL'), 
-('551ea9ccc73f4eaaa9397aeace7bc6fb', 'ADMIN');
+('551ea9ccc73f4eaaa9397aeace7bc6fb', 'ROLE_ADMIN');

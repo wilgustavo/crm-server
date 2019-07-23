@@ -3,6 +3,7 @@ package com.crm.api.controller;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -52,6 +53,7 @@ public class UsuarioController {
      * @param datos de usuario
      * @return datos del usuario
      */
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/usuarios")
     public UsuarioDto crear(@RequestBody UsuarioDto usuarioDto) {
         Usuario usuario = usuarioService.crear(modelMapper.map(usuarioDto, Usuario.class));
