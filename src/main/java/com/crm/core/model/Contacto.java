@@ -4,13 +4,16 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 import javax.persistence.Embedded;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import lombok.Data;
 
 @Data
+@Entity
 public class Contacto {
     
     @Id @GeneratedValue
@@ -26,6 +29,7 @@ public class Contacto {
     private Direccion direccion;
     
     @ManyToOne
+    @JoinColumn(name = "asignado")
     private Usuario asignado;
     
 }

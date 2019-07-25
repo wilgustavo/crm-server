@@ -2,9 +2,9 @@ package com.crm.core.model;
 
 import javax.persistence.Embeddable;
 
-import lombok.Value;
+import lombok.Data;
 
-@Value
+@Data
 @Embeddable
 public class Direccion {
     
