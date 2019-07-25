@@ -3,11 +3,16 @@ package com.crm.api.controller;
 import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.crm.api.dto.ContactoDto;
+import com.crm.core.model.Contacto;
 import com.crm.core.service.ContactoService;
 
 @RestController
@@ -26,6 +31,11 @@ public class ContactoController {
         return modelMapper.map(contactoService.consultar(id), ContactoDto.class);
     }
     
-    
+    @PostMapping("/contactos")
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public ContactoDto crear(@RequestBody ContactoDto contactoDto) {
+        Contacto contacto = modelMapper.map(contactoDto, Contacto.class);
+        return modelMapper.map(contactoService.crear(contacto), ContactoDto.class);
+    }
 
 }

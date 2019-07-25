@@ -16,13 +16,17 @@ public class ContactoServiceImpl implements ContactoService {
     private ContactoRepository contactoRepository;
     
     public ContactoServiceImpl(ContactoRepository contactoRepository) {
-        super();
         this.contactoRepository = contactoRepository;
     }
 
     @Override
     public Contacto consultar(UUID id) {
         return contactoRepository.findById(id).orElseThrow(() -> new NotFoundException(NOT_FOUND_ERROR + id));
+    }
+
+    @Override
+    public Contacto crear(Contacto contacto) {
+        return contactoRepository.save(contacto);
     }
 
 }
