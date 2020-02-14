@@ -1,13 +1,13 @@
-package com.crm;
+package com.gmw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class App {
+public class CrmApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(App.class, args);
+		SpringApplication.run(CrmApplication.class, args);
 	}
 
 }
